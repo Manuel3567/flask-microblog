@@ -16,3 +16,21 @@ system python von ubuntu ist bei /usr/bin/python
 
 uv python ist unter deinem home directory
 
+---
+In src/app/app.py Flask instanzieren
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+@app.route("/index")
+def index():
+    return "Hello, World!"
+```
+
+```
+export FLASK_APP="app.app"
+flask run
+```
+---
